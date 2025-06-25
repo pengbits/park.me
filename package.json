@@ -3,9 +3,40 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./server/bin/www -w server",
+    "prod": "NODE_ENV=production node ./server/bin/www",
+    "build": "npx vite build",
+    "test:server": "jest ./server --watchAll --detectOpenHandles",
+    "test:client": "vitest client",
+    "test": "vitest client"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies" {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.1",
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "jest": "^30.0.3",
+    "jsdom": "^26.1.0",
+    "supertest": "^7.1.1",
+    "vite": "^7.0.0",
+    "vite-express": "^0.21.1",
+    "vitest": "^3.2.4"
+  }
 }
