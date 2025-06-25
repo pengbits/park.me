@@ -3,10 +3,10 @@ const app = require('./app')
 
 
 describe('app', () => {
-  describe('GET /', () => {
+  describe('GET /api', () => {
     it('returns a greeting', async () => {
       const {body} = await request(app)
-        .get('/')
+        .get('/api')
 
       expect(body.greeting).toBe('Hello World')
     })

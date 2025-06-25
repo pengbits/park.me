@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 app.use(cors())
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/', routes.index)
+app.use('/api', routes.index)
 
 app.ViteExpress = ViteExpress
 module.exports = app;
